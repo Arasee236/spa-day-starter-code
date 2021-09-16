@@ -1,11 +1,15 @@
 package org.launchcode.spaday.models;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 public class User {
     private int id;
     private static int nextId =1;
     private  String userName;
     private  String email;
     private  String password;
+    private LocalDate dateCreated;
 
     public User(String userName,String email, String password) {
 
@@ -41,5 +45,13 @@ public class User {
     }
     public int getId() {
         return id;
+    }
+
+    public void setDateCreated(LocalDate dateCreated) {
+        this.dateCreated = dateCreated;
+    }
+
+    public LocalDate getDateCreated() {
+        return dateCreated;
     }
 }

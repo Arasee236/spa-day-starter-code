@@ -8,5 +8,10 @@
 <body>
 <p th:text="${greeting}" ></p>
 <a th:href ="@{/}">Select your spa services here</a>
+
+<p>List of registered users :</p>
+<ul th:each="user : ${users}">
+    <a th:href="@{/user/view/{id}(id=${user.id})}"> <li  th:text="${user.userName}"></li></a>
+</ul>
 </body>
 </html>
