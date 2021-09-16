@@ -5,16 +5,17 @@
     <title></title>
 </head>
 <body>
+<label th:if="${error}">Passwords must match!</label>
 <form method="post">
     <div>
         <label> Name
-            <input type ="text" name="userName" >
+            <input type ="text" name="userName" th:value="${userName}"/>
         </label>
     </div>
 
     <div>
         <label> Email
-            <input type ="text" name="email" >
+            <input type ="text" name="email" th:value="${email}"/>
         </label>
     </div>
 

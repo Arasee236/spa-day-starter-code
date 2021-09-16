@@ -22,7 +22,8 @@ public class UserController {
     @PostMapping("add")
     public String processAddUserForm(Model model, @ModelAttribute User user, String verify) {
         // add form submission handling code here
-        //model.addAttribute("verify",verify);
+        model.addAttribute("userName",user.getUserName());
+        model.addAttribute("email",user.getEmail());
 
         if (verify.equals(user.getPassword())) {
             UserData.addUser(user);
